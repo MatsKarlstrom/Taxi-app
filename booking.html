@@ -1,0 +1,92 @@
+<ion-view view-title="Boka Taxi Nu">
+
+  <div class="bar bar-subheader">
+  <h2 class="title">Här bokar du tid för resa</h2>
+</div>
+
+<ion-content class="has-subheader + padding">
+	
+	
+	<div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Hur många vill åka?
+    </div>
+    <select>
+      <option selected>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>5-9</option>
+    </select>
+  </label>
+
+</div>
+	
+	<!-- I brist på att hitta datepicker så gjorde jag ett alternativ till klocka -->
+<div class="list">
+
+	<label class="item item-input item-select">
+		<div class="input-label">
+			Vilket klockslag vill du åka?
+			</div>
+			<select>
+				<option selected>06.00</option>
+				<option>07.00</option>
+				<option>08.00</option>
+				<option>09.00</option>
+				<option>10.00</option>
+				<option>11.00</option>
+				<option>12.00</option>
+				<option>13.00</option>
+				<option>14.00</option>
+				<option>15.00</option>
+				<option>16.00</option>
+				<option>17.00</option>
+				<option>18.00</option>
+				<option>19.00</option>
+				<option>20.00</option>
+				<option>21.00</option>
+				<option>22.00</option>
+				<option>Annan tid - fyll i nedan</option>
+			</select>
+	</label>
+
+</div>
+	
+	
+	<!-- Här en liten lista med checkbox för varsel om resa och betalningsform -->
+	<ul class="list">
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Jag vill få sms 15 minuter innan resa
+  </li>
+
+    <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Jag vill betala kontant
+  </li>
+  
+    <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Jag vill betala med betalkort
+  </li>
+</ul>
+	
+	<!-- Här en confirm-knapp på uppgifter inför att beställa resa -->
+<br>
+	<ion-item href="#/app/confirm">
+		Bekräfta resebeställning
+	</ion-item>
+
+  </ion-content>
+</ion-view>
