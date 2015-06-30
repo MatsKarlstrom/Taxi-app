@@ -1,0 +1,88 @@
+<ion-side-menus enable-menu-with-back-views="left">
+
+	<ion-side-menu-content>
+  
+		<ion-nav-bar class="bar-positive">
+	
+			<ion-nav-back-button class="button bar-energized">
+			</ion-nav-back-button>
+
+				<ion-nav-buttons side="left">
+					<button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+					</button>
+				</ion-nav-buttons>
+	  
+		</ion-nav-bar>
+		
+	    <ion-nav-view name="menuContent"></ion-nav-view>
+	
+	<ion-content>
+	
+	<ion-item menu-close href="#/app/home">
+				Home
+			</ion-item> 
+	
+	</ion-content> 
+		
+  </ion-side-menu-content>
+  
+  <ion-side-menu side="left">
+  
+ <!-- Här följer sidomenyns header-bar -->
+ 
+		<ion-header-bar class="bar-energized">
+			<h1 class="title">Meny</h1>
+		</ion-header-bar>
+	
+<!-- HÄR FÖLJER INNEHÅLL I SIDOMENYN -->
+
+    <ion-content>
+	
+	
+<!-- VI STOPPAR IN INNEHÅLLET I EN LISTA -->
+
+      <ion-list>
+		
+<!-- Till skapa nytt konto - fixa navigeringen på knappen! Eller ska denna precis som login ha modal-upplägg i controllers?  Login finns ju inte som state! -->
+
+			<ion-item menu-close href="#/app/create-account">
+				Create Account
+			</ion-item>
+			
+			
+<!-- Med ng-click säger vi till angular att vi vill något ska hända när vi klickar på knappen, i det här fallet logga in i logga-in-formulär . 
+	  OBS! login() har paranteser och är alltså en funktion som kan ta emot och skicka ut. -->
+	  
+        <ion-item menu-close ng-click="login()">
+			Login
+		</ion-item>		
+			
+		
+<!--Till framsidan - Byt playlists mot ny view med knappar men behåll navigering!! -->
+
+			<ion-item menu-close href="#/app/home">
+				Home
+			</ion-item>
+								
+		
+<!-- Länka views. menu.html är annan metod men i princip detsamma som tabs.html. 
+	Med taggen <ION-ITEM MENU-CLOSE HREF="#/APP/ÖNSKAD VIEW-HTML"> .item är ord och rubriker istället för knappar i tabs
+	Med tillägget menu-close så stängs fönstret som rubriken finns i. Men testa och kolla att det är rätt!!. -->
+	
+			<ion-item menu-close href="https://www.facebook.com/pages/Taxi-NU/1603946239820456">
+					<button class="button button-full button-positive">
+							Taxi Nu on Facebook
+						<i class="icon ion-social-facebook-outline"></i>
+					</button>
+			</ion-item>
+		
+			<ion-item menu-close href="#/app/info">
+					To Mr Blanco
+			</ion-item>
+		
+      </ion-list>
+	  
+    </ion-content>
+	
+  </ion-side-menu>
+</ion-side-menus>
